@@ -1,0 +1,108 @@
+{
+	"users": [
+		{
+			"name": "Thales Oliveira",
+			"email": "thalesoliveira200@gmail.com",
+			"cpf": "434.446.888-06",
+			"rg": "11111111111111111",
+			"phone": "16981096969",
+			"password": "1q2w3e4r",
+			"password_confirm": "1q2w3e4r",
+			"terms": "1",
+			"completed": true,
+			"id": 1,
+			"type": 0
+		}
+	],
+	"doctors": [
+		{
+			"name": "Thales doct",
+			"email": "thales@live.com",
+			"phone": "16981096969",
+			"gender": "1",
+			"cpf": "111.111.111-11",
+			"rg": "11111111111111111",
+			"birth": "2020-12-17T14:07:19.155Z",
+			"marital_status": "Solteiro",
+			"nationality": "Brasileiro",
+			"naturalness": "Brasileiro",
+			"address": "AVENIDA ITALIA, S/N QUILOMETRO 8 - FUNDACAO UNIVERSIDADE DO RIO GRANDE",
+			"number": "5",
+			"district": "Carreiros",
+			"city": "RIO GRANDE",
+			"state": "RS",
+			"zipcode": "96203900",
+			"specialty": "Sei la",
+			"crm": "4646464646",
+			"occupation_area": "Bla bla ",
+			"salary": "500000",
+			"type": 1,
+			"id": 1
+		}
+	],
+	"labs": [
+		{
+			"name": "Laboratorio 1",
+			"email": "labs@hotmail.com",
+			"phone": "11020914149",
+			"address": "teste",
+			"number": "8",
+			"complement": "Casa do Estudante 1 - Quarto 110",
+			"district": "Carreiros",
+			"city": "Rio Grande",
+			"state": "RS",
+			"zipcode": "96203900",
+			"cnpj": "64646464646",
+			"cnes": "54646464646",
+			"iss": "6464646464",
+			"crm": "4646464646",
+			"employees": "210000",
+			"types": [
+				"Tipo 1",
+				"Tipo 2",
+				"Tipo 3"
+			],
+			"id": 1
+		},
+		{
+			"name": "Thales Oliveira",
+			"email": "thalesoliveira200@gmail.com",
+			"phone": "16981096969",
+			"address": "Av. Italia Km 8",
+			"number": "s/n",
+			"complement": "Casa do Estudante 1 - Quarto 110",
+			"district": "Carreiros",
+			"city": "Rio Grande",
+			"state": "RS",
+			"zipcode": "96203900",
+			"cnpj": "46464646464",
+			"cnes": "46464646464",
+			"iss": "46464646464",
+			"crm": "46464646464",
+			"employees": "111111",
+			"types": [
+				"Tipo 1",
+				"Tipo 2",
+				"Tipo 3",
+				"Tipo 4"
+			],
+			"id": 2
+		}
+	],
+	"appointments": [
+		{
+			"user": 1,
+			"doctor": 1,
+			"date": "2020-12-17T13:29:45.858Z",
+			"id": 1
+		}
+	],
+	"exams": [
+		{
+			"user": 1,
+			"lab": 1,
+			"date": "2020-12-17T13:34:53.289Z",
+			"id": 1
+		}
+	]
+}
