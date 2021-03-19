@@ -40,7 +40,8 @@ const PatientsCreate: React.FC = () => {
 			message.success('Cadastro realizado com sucesso');
 			formRef.current.resetFields();
 		} catch (err) {
-			console.log(err);
+
+			message.error(err.message || err);
 		}
 	}
 

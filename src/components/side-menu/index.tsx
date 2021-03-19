@@ -29,37 +29,38 @@ const SideMenu: React.FC = () => {
 				>
 
 					<img src={Logo} alt="ClinCare Logo" className="logo" />
-
-					<SubMenu key="sub1" icon={<ScheduleOutlined />} title="Agendamento">
-						{(user.type !== 3) &&
-							<Menu.Item key="5">
-								<Link to="/dashboard/appointments/create">
-									Marcar Consulta
+					{user.type !== 5 && (
+						<SubMenu key="sub1" icon={<ScheduleOutlined />} title="Agendamento">
+							{(user.type === 3) &&
+								<Menu.Item key="5">
+									<Link to="/dashboard/appointments/create">
+										Marcar Consulta
 								</Link>
-							</Menu.Item>
-						}
-						{(user.type !== 3) &&
-							<Menu.Item key="7">
-								<Link to="/dashboard/appointments/list">
-									Historico de Consultas
+								</Menu.Item>
+							}
+							{(user.type !== 1) &&
+								<Menu.Item key="7">
+									<Link to="/dashboard/appointments/list">
+										Historico de Consultas
 							</Link>
-							</Menu.Item>
-						}
-						{(user.type === 2 || user.type === 5) &&
-							<Menu.Item key="6">
-								<Link to="/dashboard/exams/create">
-									Marcar Exame
+								</Menu.Item>
+							}
+							{(user.type === 1) &&
+								<Menu.Item key="6">
+									<Link to="/dashboard/exams/create">
+										Marcar Exame
 								</Link>
-							</Menu.Item>
-						}
-						{(user.type !== 3) &&
-							<Menu.Item key="8">
-								<Link to="/dashboard/exams/list">
-									Historico de Exames
+								</Menu.Item>
+							}
+							{(user.type !== 3) &&
+								<Menu.Item key="8">
+									<Link to="/dashboard/exams/list">
+										Historico de Exames
 								</Link>
-							</Menu.Item>
-						}
-					</SubMenu>
+								</Menu.Item>
+							}
+						</SubMenu>
+					)}
 					{user.type === 5 &&
 						<SubMenu key="sub2" icon={<UserAddOutlined />} title="Cadastramento">
 							<Menu.Item key="9">

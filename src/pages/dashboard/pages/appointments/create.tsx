@@ -70,7 +70,8 @@ const AppointmentsCreate: React.FC = () => {
 			setUserInput(null);
 
 		} catch (err) {
-			message.error(err);
+
+			message.error(err.message || err);
 		}
 	}
 

@@ -91,7 +91,7 @@ const ExamsList = () => {
 		<Container>
 			<section>
 				<header>
-					<h1>Consultas Marcadas</h1>
+					<h1>Exames Marcados</h1>
 					<Select style={{ width: 200 }} onChange={e => {
 						setOrder(e);
 					}} defaultValue={"Sempre"}>

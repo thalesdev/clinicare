@@ -37,6 +37,7 @@ const ExamsCreate: React.FC = () => {
 		}
 
 		if (user.type === 1) return [user];
+
 		return dataLabs;
 	}, [dataLabs, user]);
 
@@ -69,7 +70,8 @@ const ExamsCreate: React.FC = () => {
 			setUserInput(null);
 
 		} catch (err) {
-			message.error(err);
+
+			message.error(err.message || err);
 		}
 	}
 

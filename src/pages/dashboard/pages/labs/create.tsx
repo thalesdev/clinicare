@@ -45,7 +45,7 @@ const LabsCreate: React.FC = () => {
 			formRef.current.resetFields();
 			setResetState(true);
 		} catch (err) {
-			message.error(err);
+			message.error(err.message || err);
 		}
 	}
 
