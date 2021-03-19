@@ -16,6 +16,21 @@ const AppointmentsList = () => {
 	const [renewState, setRenewState] = useState(false);
 
 
+	const { data: dataCount0 } = useFetch(`/appointments?order=0`, api, {});
+	const { data: dataCount1 } = useFetch(`/appointments?order=1`, api, {});
+	const { data: dataCount2 } = useFetch(`/appointments?order=2`, api, {});
+	const { data: dataCount3 } = useFetch(`/appointments?order=3`, api, {});
+	const { data: dataCount4 } = useFetch(`/appointments?order=4`, api, {});
+
+
+
+	const count0 = useMemo(() => dataCount0 ? dataCount0.length : 0, [dataCount0]);
+	const count1 = useMemo(() => dataCount1 ? dataCount1.length : 0, [dataCount1]);
+	const count2 = useMemo(() => dataCount2 ? dataCount2.length : 0, [dataCount2]);
+	const count3 = useMemo(() => dataCount3 ? dataCount3.length : 0, [dataCount3]);
+	const count4 = useMemo(() => dataCount4 ? dataCount4.length : 0, [dataCount4]);
+
+
 	const appointments = useMemo(() => {
 		if (!dataAppointments) {
 			return []
@@ -81,11 +96,11 @@ const AppointmentsList = () => {
 
 					<h1>Consultas Marcadas</h1>
 					<Select style={{ width: 200 }} onChange={e => setOrder(e)} defaultValue="Sempre">
-						<Option value="0">Sempre</Option>
-						<Option value="1">Hoje</Option>
-						<Option value="2">Este Mês</Option>
-						<Option value="3">Esta Semana</Option>
-						<Option value="4">Ultimo Ano</Option>
+						<Option value="0">Sempre ({count0})</Option>
+						<Option value="1">Hoje ({count1})</Option>
+						<Option value="2">Este Mês ({count2})</Option>
+						<Option value="3">Esta Semana ({count3})</Option>
+						<Option value="4">Ultimo Ano ({count4})</Option>
 					</Select>
 				</header>
 

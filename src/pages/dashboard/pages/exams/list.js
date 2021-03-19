@@ -17,6 +17,19 @@ const ExamsList = () => {
 
 
 
+	const { data: dataCount0 } = useFetch(`/exams?order=0`, api, {});
+	const { data: dataCount1 } = useFetch(`/exams?order=1`, api, {});
+	const { data: dataCount2 } = useFetch(`/exams?order=2`, api, {});
+	const { data: dataCount3 } = useFetch(`/exams?order=3`, api, {});
+	const { data: dataCount4 } = useFetch(`/exams?order=4`, api, {});
+
+
+
+	const count0 = useMemo(() => dataCount0 ? dataCount0.length : 0, [dataCount0]);
+	const count1 = useMemo(() => dataCount1 ? dataCount1.length : 0, [dataCount1]);
+	const count2 = useMemo(() => dataCount2 ? dataCount2.length : 0, [dataCount2]);
+	const count3 = useMemo(() => dataCount3 ? dataCount3.length : 0, [dataCount3]);
+	const count4 = useMemo(() => dataCount4 ? dataCount4.length : 0, [dataCount4]);
 
 	const exams = useMemo(() => {
 		if (!dataExams) {
@@ -82,11 +95,11 @@ const ExamsList = () => {
 					<Select style={{ width: 200 }} onChange={e => {
 						setOrder(e);
 					}} defaultValue={"Sempre"}>
-						<Option value="0">Sempre</Option>
-						<Option value="1">Hoje</Option>
-						<Option value="2">Este Mês</Option>
-						<Option value="3">Esta Semana</Option>
-						<Option value="4">Ultimo Ano</Option>
+						<Option value="0">Sempre ({count0})</Option>
+						<Option value="1">Hoje ({count1})</Option>
+						<Option value="2">Este Mês ({count2})</Option>
+						<Option value="3">Esta Semana ({count3})</Option>
+						<Option value="4">Ultimo Ano ({count4})</Option>
 					</Select>
 				</header>
 				{exams && (
